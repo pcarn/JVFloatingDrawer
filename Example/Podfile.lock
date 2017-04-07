@@ -6,9 +6,11 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   JVFloatingDrawer:
-    :path: "../"
+    :path: ../
 
 SPEC CHECKSUMS:
   JVFloatingDrawer: 4782b1df21411aef2c1818f3b346cace02cc2e24
 
-COCOAPODS: 0.37.2
+PODFILE CHECKSUM: f05e356e11bb0527b08f50ec30940e20a7f1673c
+
+COCOAPODS: 1.1.1

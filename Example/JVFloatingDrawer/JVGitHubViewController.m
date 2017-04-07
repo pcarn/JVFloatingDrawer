@@ -8,10 +8,12 @@
 
 #import "JVGitHubViewController.h"
 #import "AppDelegate.h"
+#import "JVFloatingDrawerViewController.h"
+
 
 static NSString * const kJVGithubProjectPage = @"http://github.com/JVillella/JVFloatingDrawer";
 
-@interface JVGitHubViewController ()
+@interface JVGitHubViewController () <JVFloatingDrawerCenterViewController>
 
 @property (weak, nonatomic) IBOutlet UIWebView *webview;
 
@@ -38,6 +40,12 @@ static NSString * const kJVGithubProjectPage = @"http://github.com/JVillella/JVF
 
 - (IBAction)actionToggleRightDrawer:(id)sender {
     [[AppDelegate globalDelegate] toggleRightDrawer:self animated:YES];
+}
+
+#pragma mark - JVFloatingDrawerCenterViewController
+
+- (BOOL)shouldOpenDrawerWithSide:(JVFloatingDrawerSide)drawerSide {
+    return YES;
 }
 
 @end

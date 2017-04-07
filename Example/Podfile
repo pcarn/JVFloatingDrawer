@@ -1,10 +1,10 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
-target 'JVFloatingDrawer', :exclusive => true do
+target 'JVFloatingDrawer' do
 	pod "JVFloatingDrawer", :path => "../"
 end
 
-target 'JVFloatingDrawerTests', :exclusive => true do
+target 'JVFloatingDrawerTests' do
 	pod "JVFloatingDrawer", :path => "../"
 end
 

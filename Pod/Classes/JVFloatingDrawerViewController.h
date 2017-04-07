@@ -16,6 +16,12 @@ typedef NS_ENUM(NSInteger, JVFloatingDrawerSide) {
     JVFloatingDrawerSideRight
 };
 
+@protocol JVFloatingDrawerCenterViewController <NSObject>
+@optional
+- (BOOL)shouldOpenDrawerWithSide:(JVFloatingDrawerSide)drawerSide;
+
+@end
+
 @interface JVFloatingDrawerViewController : UIViewController
 
 #pragma mark - Managed View Controllers
@@ -49,5 +55,10 @@ typedef NS_ENUM(NSInteger, JVFloatingDrawerSide) {
 #pragma mark - Background
 
 @property (nonatomic, strong) UIImage *backgroundImage;
+
+#pragma mark - Pan Gesture
+
+@property (nonatomic, assign) CGFloat minimumDragDistance;
+@property (nonatomic, assign) CGFloat dragRespondingWidth;
 
 @end

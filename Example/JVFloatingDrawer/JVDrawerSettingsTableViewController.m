@@ -10,7 +10,7 @@
 #import "JVFloatingDrawerSpringAnimator.h"
 #import "AppDelegate.h"
 
-@interface JVDrawerSettingsTableViewController ()
+@interface JVDrawerSettingsTableViewController () <JVFloatingDrawerCenterViewController>
 
 @property (nonatomic, strong, readonly) JVFloatingDrawerSpringAnimator *drawerAnimator;
 
@@ -93,6 +93,12 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - JVFloatingDrawerCenterViewController
+
+- (BOOL)shouldOpenDrawerWithSide:(JVFloatingDrawerSide)drawerSide {
+    return YES;
 }
 
 @end

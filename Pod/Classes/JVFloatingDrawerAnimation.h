@@ -57,6 +57,23 @@
  */
 - (void)didRotateOpenDrawerWithOpenSide:(JVFloatingDrawerSide)drawerSide sideView:(UIView *)sideView centerView:(UIView *)centerView;
 
+/**
+ *  Implementations should move the side view and the center view.
+ *
+ *  @param trans      The point that your finger points to
+ *  @param sideView   The view of the side of the drawer to be presented
+ *  @param centerView The center view
+ */
+@optional
+- (void)moveWithTranslation:(CGPoint)trans
+                   sideView:(UIView *)sideView
+                 centerView:(UIView *)centerView;
+
+@optional
+- (void)moveBackWithTranslation:(CGPoint)trans
+                       sideView:(UIView *)sideView
+                     centerView:(UIView *)centerView;
+
 @end
 
 
