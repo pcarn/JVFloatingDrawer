@@ -35,7 +35,7 @@ static const CGFloat kJVCenterViewDestinationScale = 0.7;
 #pragma mark Presentation/Dismissal
     
 - (void)presentationWithSide:(JVFloatingDrawerSide)drawerSide sideView:(UIView *)sideView centerView:(UIView *)centerView animated:(BOOL)animated completion:(void (^)(BOOL))completion {
-    void (^springAnimation)() = ^{
+    void (^springAnimation)(void) = ^{
         [self applyTransformsWithSide:drawerSide sideView:sideView centerView:centerView];
     };
     
@@ -53,7 +53,7 @@ static const CGFloat kJVCenterViewDestinationScale = 0.7;
 }
 
 - (void)dismissWithSide:(JVFloatingDrawerSide)drawerSide sideView:(UIView *)sideView centerView:(UIView *)centerView animated:(BOOL)animated completion:(void (^)(BOOL))completion {
-    void (^springAnimation)() = ^{
+    void (^springAnimation)(void) = ^{
         [self removeTransformsWithSide:drawerSide sideView:sideView centerView:centerView];
     };
     
@@ -74,7 +74,7 @@ static const CGFloat kJVCenterViewDestinationScale = 0.7;
 - (void)willRotateOpenDrawerWithOpenSide:(JVFloatingDrawerSide)drawerSide sideView:(UIView *)sideView centerView:(UIView *)centerView {}
 
 - (void)didRotateOpenDrawerWithOpenSide:(JVFloatingDrawerSide)drawerSide sideView:(UIView *)sideView centerView:(UIView *)centerView {
-    void (^springAnimation)() = ^{
+    void (^springAnimation)(void) = ^{
         [self applyTransformsWithSide:drawerSide sideView:sideView centerView:centerView];
     };
     
