@@ -185,7 +185,7 @@ NSString *JVFloatingDrawerSideString(JVFloatingDrawerSide side) {
         UIView *centerView = self.drawerView.centerViewContainer;
         CGPoint where = [gestureRecognizer locationInView:centerView];
         UINavigationController *navc = ((UINavigationController *)_centerViewController);
-        UIViewController <JVFloatingDrawerCenterViewController> *topViewController = ((UIViewController <JVFloatingDrawerCenterViewController> *)navc.topViewController);
+        UIViewController <JVFloatingDrawerPanGestureDelegate> *topViewController = ((UIViewController <JVFloatingDrawerPanGestureDelegate> *)navc.topViewController);
         if ([topViewController respondsToSelector:@selector(shouldOpenDrawerWithSide:)]) {
             if (
                 (where.x < self.dragRespondingWidth &&
@@ -233,7 +233,7 @@ static BOOL canMove = NO;
             UIView *sideView    = [self.drawerView viewContainerForDrawerSide:self.currentlyOpenedSide];
             UIView *centerView  = self.drawerView.centerViewContainer;
             UINavigationController *navc = ((UINavigationController *)_centerViewController);
-            UIViewController <JVFloatingDrawerCenterViewController> *topViewController = ((UIViewController <JVFloatingDrawerCenterViewController> *)navc.topViewController);
+            UIViewController <JVFloatingDrawerPanGestureDelegate> *topViewController = ((UIViewController <JVFloatingDrawerPanGestureDelegate> *)navc.topViewController);
             if (toLeft) {
                 if ((
                      [topViewController respondsToSelector:@selector(shouldOpenDrawerWithSide:)]

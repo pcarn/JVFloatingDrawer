@@ -16,7 +16,7 @@ typedef NS_ENUM(NSInteger, JVFloatingDrawerSide) {
     JVFloatingDrawerSideRight
 };
 
-@protocol JVFloatingDrawerCenterViewController <NSObject>
+@protocol JVFloatingDrawerPanGestureDelegate <NSObject>
 @optional
 - (BOOL)shouldOpenDrawerWithSide:(JVFloatingDrawerSide)drawerSide;
 

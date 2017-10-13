@@ -69,9 +69,9 @@ The background image is set by assigning the `backgroundImage` property.
 
 Animators are the main players of `JVFloatingDrawer`. `JVFloatingDrawer` comes with a prebuilt spring animator that can be customized by settings its `animationDuration`, `animationDelay`, `springDamping`, and `initialSpringVelocity`. After instantiating a new animator object you assign it to the `animator` property on the `JVFloatingDrawerViewController` to let it work its magic. You can make your own animators by implementing the `JVFloatingDrawerAnimation` protocol. More on that later.
 
-#### `JVFloatingDrawerCenterViewController`
+#### `JVFloatingDrawerPanGestureDelegate`
 
-The `JVFloatingDrawerCenterViewController` is a protocol that allows each ViewController in the Drawer to decides their own gesture behaviour.
+The `JVFloatingDrawerPanGestureDelegate` is a protocol that allows each ViewController in the Drawer to decides their own gesture behaviour.
 
     - (BOOL)shouldOpenDrawerWithSide:(JVFloatingDrawerSide)drawerSide;
 

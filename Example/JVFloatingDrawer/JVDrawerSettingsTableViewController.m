@@ -10,7 +10,7 @@
 #import "JVFloatingDrawerSpringAnimator.h"
 #import "AppDelegate.h"
 
-@interface JVDrawerSettingsTableViewController () <JVFloatingDrawerCenterViewController>
+@interface JVDrawerSettingsTableViewController () <JVFloatingDrawerPanGestureDelegate>
 
 @property (nonatomic, strong, readonly) JVFloatingDrawerSpringAnimator *drawerAnimator;
 
@@ -95,7 +95,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - JVFloatingDrawerCenterViewController
+#pragma mark - JVFloatingDrawerPanGestureDelegate
 
 - (BOOL)shouldOpenDrawerWithSide:(JVFloatingDrawerSide)drawerSide {
     return YES;
