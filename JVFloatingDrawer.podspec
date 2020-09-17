@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.author           = { "JVillella" => "julian.villella@hotmail.com" }
   s.source           = { :git => "https://github.com/JVillella/JVFloatingDrawer.git", :tag => s.version.to_s }
 
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios, '13.0'
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes'
